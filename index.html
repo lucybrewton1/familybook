@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Project 78</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Family Book</h1>
+        <img src="" id="picture">
+        <h4 id="family_names">Family Book</h4>
+        <button onclick="update();">Next</button>
+        <script>
+            var names=["Dad","Mom","Katy(younger-sister)","Daisy(younger-sister)"];
+            console.log(name);
+            document.getElementById("family_names").innerHTML=name[0];
+            
+            var pictures=["father.jpg","mother.jpg","katy.jpg","daisy.jpg"];
+            console.log(pictures);
+            document.getElementById("picture").src=pictures;
+
+            var i=0;
+            function update() {
+                i++;
+                var number_of_family_pictures=3;
+                if(i>number_of_family_pictures) {
+                    i=0;
+                }
+                var updated_images=pictures[i];
+                var updated_name=names[i];
+                document.getElementById("family_names").innerHTML=updated_name;
+                document.getElementById("picture").src=updated_images;
+            }
+        </script>
+    </body>
+</html>
